@@ -3,7 +3,7 @@
     <h2>发表评论</h2>
     <hr>
     <form action>
-      <textarea placeholder="请输入要BB的内容(不能超过100个字)" id="comment"></textarea>
+      <textarea placeholder="请输入要BB的内容(不能超过100个字)" id="comment" v-model="msg"></textarea>
       <van-button type="info" size="large">发表评论</van-button>
       <!-- 品论楼层 -->
       <div class="cmt-list">
@@ -31,7 +31,8 @@ import { Toast } from 'vant';
 export default {
   data () {
     return {
-      comments: []
+      comments: [],
+      msg: ''  //评论的数组
     }
   },
   created () {

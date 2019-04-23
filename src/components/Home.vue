@@ -18,7 +18,7 @@
           </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-          <router-link to="/home/newsList">
+          <router-link to="/home/photosList">
             <img src="../images/menu2.png">
             <!-- <span class="mui-badge">5</span> -->
             <!-- 这个是右上角的小红标 -->
