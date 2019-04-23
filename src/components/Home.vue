@@ -3,8 +3,8 @@
     <!-- 轮播图 -->
     <van-swipe :autoplay="3000" indicator-color="blue" :height="200">
       <!-- [0]是因为console.log(res.data.message)打印出来发现是rotationList下第一个元素中的对象才是砸门的图片信息 -->
-      <van-swipe-item v-for="(item, index) in rotationList[0]" :key="item.url">
-        <img :src="item.img">
+      <van-swipe-item v-for="(item, index) in rotationList[0]" :key="item.img">
+        <img :src="item.img" style="width:320px;height:200px">
       </van-swipe-item>
     </van-swipe>
 
@@ -91,10 +91,6 @@ export default {
 </script>
 
 <style scoped>
-van-swipe-item img {
-  width: 100%;
-  height: 100%;
-}
 .grid ul {
   background-color: #fff;
 }

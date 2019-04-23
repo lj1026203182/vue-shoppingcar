@@ -3,7 +3,10 @@
     <!-- 顶部header区域 -->
     <van-nav-bar title="vue项目" left-text="返回" left-arrow @click-left="onClickLeft"/>
     <!-- 中间路由router-view部分 -->
-    <router-view></router-view>
+    <!-- 添加过度动画 -->
+    <transition>
+      <router-view></router-view>
+    </transition>
     <!-- 底部tabbar部分 -->
     <nav class="mui-bar mui-bar-tab">
       <router-link to="/home" class="mui-tab-item">
@@ -42,4 +45,21 @@ export default {
 </script>
 
 <style>
+.app-container {
+  /* 解决底部tabbar移动问题 */
+  overflow: hidden;
+}
+.v-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.4s linear;
+}
 </style>
