@@ -3,9 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import { NavBar } from 'vant'
+import { NavBar, Swipe, SwipeItem } from 'vant'
 import './lib/mui/css/mui.min.css'
+import './lib/mui/css/icons-extra.css'
+import './lib/mui/fonts/mui-icons-extra.ttf'
+// 导入axios
+import axios from 'axios'
+// 使用axios
+axios.defaults.baseURL = 'http://www.liulongbin.top:3005'
+Vue.prototype.http = axios
 Vue.use(NavBar)
+  .use(Swipe)
+  .use(SwipeItem)
 
 Vue.config.productionTip = false
 
