@@ -7,6 +7,12 @@ import MemberLink from '../components/Member.vue'
 import SearchLink from '../components/Search.vue'
 import ShopcarLink from '../components/Shopcar.vue'
 
+// 主页内容里的路由
+import NewsListLink from '../components/news/NewsList.vue'
+
+// 新闻详情里的路由
+import NewsInfo from '../components/news/Newsinfo.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -30,6 +36,15 @@ export default new Router({
     {
       path: '*',
       redirect: '/home'
+    },
+    // 主页中的路由
+    {
+      path: '/newslist',
+      component: NewsListLink
+    },
+    {
+      path: '/newslist/newsinfo/:id', // 由于id是变化的,加冒号表示参数
+      component: NewsInfo
     }
   ],
   linkActiveClass: 'mui-active' /* mui中的高亮显示,将其变成vue中自带的类 */
