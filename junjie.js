@@ -25,7 +25,6 @@ hostname = student-api.iyincaishijiao.com
 
 
 var objc = JSON.parse($response.body);
-console.log('objc123231: ', $response.body);
 //objc.data.is_bought = true;
 $notify(objc)
 
