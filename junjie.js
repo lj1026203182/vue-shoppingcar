@@ -26,7 +26,7 @@ hostname = student-api.iyincaishijiao.com
 
 var objc = JSON.parse($response.body);
 //objc.data.is_bought = true;
-$notify(12321321)
+$notify("12321321")
 
 $done({
     body : JSON.stringify(objc)
