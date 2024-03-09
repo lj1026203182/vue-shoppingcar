@@ -13,21 +13,17 @@
 *******************************
 
 [rewrite_local]
-
-# > 鱿鱼视频解锁会员
 ^https?:\/\/student-api\.iyincaishijiao\.com\/ep\/web\/trade\/is_bought url script-response-body https://raw.githubusercontent.com/lj1026203182/vue-shoppingcar/master/junjie.js
-[mitm] 
 
+[mitm] 
 hostname = student-api.iyincaishijiao.com
 *
 *
 */
 
 
-var objc = JSON.parse($response.body);
-//objc.data.is_bought = true;
-$notify("12321321")
+var obj = JSON.parse($response.body);
+obj.data.is_bought = true;
+console.log('11112')
 
-$done({
-    body : JSON.stringify(objc)
-});
+ $done({ body: JSON.stringify(obj) });
