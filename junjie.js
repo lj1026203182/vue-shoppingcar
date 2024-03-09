@@ -15,7 +15,7 @@
 [rewrite_local]
 
 # > 鱿鱼视频解锁会员
-^https?:\/\/student-api\.iyincaishijiao\.com\/ep\/web\/trade\/is_bought* url script-response-body https://raw.githubusercontent.com/lj1026203182/vue-shoppingcar/master/junjie.js
+^https?:\/\/student-api\.iyincaishijiao\.com\/ep\/web\/trade\/is_bought url script-response-body https://raw.githubusercontent.com/lj1026203182/vue-shoppingcar/master/junjie.js
 [mitm] 
 
 hostname = student-api.iyincaishijiao.com
