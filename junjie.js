@@ -18,7 +18,7 @@
 ^https?:\/\/student-api\.iyincaishijiao\.com\/ep\/web\/trade\/is_bought* url script-response-body https://raw.githubusercontent.com/lj1026203182/vue-shoppingcar/master/junjie.js
 [mitm] 
 
-hostname = *.iyincaishijiao*
+hostname = student-api.iyincaishijiao.com
 *
 *
 */
