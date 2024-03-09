@@ -26,7 +26,7 @@ hostname = *.iyincaishijiao*
 
 var objc = JSON.parse($response.body);
 console.log('objc123231: ', $response.body);
-objc.data.is_bought = true;
+//objc.data.is_bought = true;
 $notify(objc)
 
 $done({
